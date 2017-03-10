@@ -26,10 +26,11 @@ local arguments
 
 arguments=(
 $argument_list
-    '*:filename:_files'
 )
 
 _arguments -s $arguments
+
+_alternative 'args:custom args:(a b c)' 'files:filenames:_files'
 """
 
 ARGUMENT_TEMPLATE = """    {$opts}'[$description]$style'"""
